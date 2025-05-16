@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia de Padel - Padel Cali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .coach-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-green-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-table-tennis text-2xl"></i>
+                    <span class="font-semibold text-xl">Padel Cali</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-green-200">Inicio</a>
+                    <a href="#" class="text-green-200 font-medium">Academia</a>
+                    <a href="tournaments.html" class="hover:text-green-200">Torneos</a>
+                    <a href="rankings.html" class="hover:text-green-200">Ranking</a>
+                    <a href="league.html" class="hover:text-green-200">Liga</a>
+                    <a href="community.html" class="hover:text-green-200">Comunidad</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Academy Hero Section -->
+    <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Academia de Padel</h1>
+        <p class="text-xl md:text-2xl mb-8">Programas de entrenamiento para todos los niveles</p>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-green-700 mb-4">Nuestros Programas</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Ofrecemos programas adaptados a cada nivel de juego, desde iniciación hasta competición.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10">
+            <!-- Beginner Program -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                <div class="bg-green-100 py-6 px-4 text-center">
+                    <i class="fas fa-seedling text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-green-700">Principiante</h3>
+                    <p class="text-green-600 font-medium">Desde $150.000/mes</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Fundamentos del padel</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Técnica básica de golpes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Posicionamiento en pista</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>2 clases semanales</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Inscribirse
+                    </button>
+                </div>
+            </div>
+
+            <!-- Intermediate Program -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl transform scale-105">
+                <div class="bg-blue-100 py-6 px-4 text-center relative">
+                    <span class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-bl-lg">POPULAR</span>
+                    <i class="fas fa-leaf text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-blue-700">Intermedio</h3>
+                    <p class="text-blue-600 font-medium">Desde $250.000/mes</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Perfeccionamiento técnico</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Táctica de juego</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Preparación física específica</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>3 clases semanales</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Video análisis</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Inscribirse
+                    </button>
+                </div>
+            </div>
+
+            <!-- Advanced Program -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                <div class="bg-purple-100 py-6 px-4 text-center">
+                    <i class="fas fa-trophy text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-purple-700">Avanzado</h3>
+                    <p class="text-purple-600 font-medium">Desde $350.000/mes</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Técnica de alto rendimiento</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Estrategias de competición</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Preparación física intensiva</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>5 clases semanales</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Análisis de video profesional</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                            <span>Preparación mental</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Inscribirse
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Nuestros Entrenadores</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Profesionales certificados con amplia experiencia en formación de jugadores.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Coach 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden coach-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" alt="Entrenador Juan Pérez" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Juan Pérez</h3>
+                        <p class="text-green-600 font-medium mb-3">Entrenador Nivel 3 FIP</p>
+                        <p class="text-gray-600 mb-4">15 años de experiencia formando jugadores profesionales.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Técnica</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Táctica</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coach 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden coach-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" alt="Entrenadora María Gómez" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">María Gómez</h3>
+                        <p class="text-green-600 font-medium mb-3">Entrenadora Nivel 2 FIP</p>
+                        <p class="text-gray-600 mb-4">Especialista en formación de jugadores juveniles.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Iniciación</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Juveniles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coach 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden coach-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Entrenador Carlos Rojas" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Carlos Rojas</h3>
+                        <p class="text-green-600 font-medium mb-3">Preparador Físico</p>
+                        <p class="text-gray-600 mb-4">Especialista en acondicionamiento físico para padel.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Físico</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Nutrición</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-green-700 mb-4">Horarios de Clases</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Consulta nuestra disponibilidad y reserva tu clase.</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hora</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Lunes</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Martes</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Miércoles</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Jueves</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Viernes</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sábado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">7:00 - 9:00</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Principiantes</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Intermedios</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Principiantes</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Avanzados</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Intermedios</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Juveniles</td>
+                        </tr>
+                        <!-- More schedule rows would go here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-green-700 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Testimonios</h2>
+                <p class="text-green-200 max-w-3xl mx-auto">Lo que dicen nuestros alumnos sobre la academia</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-green-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Laura M." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Laura M.</h4>
+                            <p class="text-green-300 text-sm">Alumna 2 años</p>
+                        </div>
+                    </div>
+                    <p class="text-green-100">"En 6 meses pasé de no saber agarrar la pala a competir en torneos locales. Los entrenadores son excelentes!"</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-green-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Carlos V." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Carlos V.</h4>
+                            <p class="text-green-300 text-sm">Alumno 1 año</p>
+                        </div>
+                    </div>
+                    <p class="text-green-100">"La metodología de enseñanza es muy práctica y efectiva. He mejorado mi juego un 100%."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-green-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana P." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ana P.</h4>
+                            <p class="text-green-300 text-sm">Alumna 3 meses</p>
+                        </div>
+                    </div>
+                    <p class="text-green-100">"El ambiente es muy familiar y los horarios son flexibles. Perfecto para quienes trabajamos."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Padel Cali</h3>
+                    <p class="text-gray-400">La comunidad de padel más grande del Valle del Cauca.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Academia</a></li>
+                        <li><a href="tournaments.html" class="text-gray-400 hover:text-white">Torneos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Cali, Colombia</p>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i> +57 123 456 7890</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@padelcali.com</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Padel Community Cali. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality would go here
+    </script>
+</body>
+</html>

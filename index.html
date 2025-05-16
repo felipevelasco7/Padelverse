@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padel Community Cali</title>
+    <meta name="description" content="Únete a la comunidad de padel más activa de Cali. Encuentra clases, torneos y rankings.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1592656094267-764a60392b9b');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+<!-- Navigation -->
+<nav class="bg-green-700 text-white shadow-lg">
+    <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-table-tennis text-2xl"></i>
+                <span class="font-semibold text-xl">Padel Cali</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="hover:text-green-200">Inicio</a>
+                <a href="academy.html" class="hover:text-green-200">Academia</a>
+                <a href="tournaments.html" class="hover:text-green-200">Torneos</a>
+                <a href="rankings.html" class="hover:text-green-200">Ranking</a>
+                <a href="league.html" class="hover:text-green-200">Liga</a>
+                <a href="#" class="text-green-200 font-medium">Comunidad</a>
+            </div>
+            <div class="md:hidden">
+                <button class="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white py-32 px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Comunidad de Padel en Cali</h1>
+        <p class="text-xl md:text-2xl mb-8">Únete a la creciente comunidad de padel en la capital vallecaucana</p>
+        <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300">
+            Regístrate Ahora
+        </button>
+    </header>
+
+    <main>
+        <div class="container mx-auto px-6 py-12">
+            <!-- Academy Section -->
+            <section id="academy" class="mb-20">
+                <h2 class="text-3xl font-bold text-center mb-12 text-green-700">Academia de Padel</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img loading="lazy" src="https://allforpadel.com/3366-thickbox_default/adidas-padel-master-vol-1-version-en-ingles.jpg" alt="Clases de padel" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Clases para Principiantes</h3>
+                            <p class="text-gray-600 mb-4">Aprende los fundamentos del padel con nuestros entrenadores certificados.</p>
+                            <button class="text-green-600 font-medium">Más información</button>
+                        </div>
+                    </div>
+                    <!-- Más tarjetas pueden agregarse aquí -->
+                </div>
+            </section>
+
+            <!-- Tournaments Section -->
+            <section id="tournaments" class="mb-20">
+                <h2 class="text-3xl font-bold text-center mb-12 text-green-700">Próximos Torneos</h2>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-800 rounded-full p-3 mr-4">
+                            <i class="fas fa-trophy text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Torneo Aniversario Padel Cali</h3>
+                            <p class="text-gray-600">Próximamente</p>
+                        </div>
+                    </div>
+                    <!-- Más torneos aquí -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Padel Cali</h3>
+                    <p class="text-gray-400">La comunidad de padel más grande del Valle del Cauca.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="#academy" class="text-gray-400 hover:text-white">Academia</a></li>
+                        <li><a href="#tournaments" class="text-gray-400 hover:text-white">Torneos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Cali, Colombia</p>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i> +57 123 456 7890</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@padelcali.com</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Padel Community Cali. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS para el menú móvil -->
+    <script>
+        const btn = document.querySelector(".mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

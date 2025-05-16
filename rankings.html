@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking de Padel - Padel Cali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .ranking-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .player-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-green-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-table-tennis text-2xl"></i>
+                    <span class="font-semibold text-xl">Padel Cali</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-green-200">Inicio</a>
+                    <a href="academy.html" class="hover:text-green-200">Academia</a>
+                    <a href="tournaments.html" class="hover:text-green-200">Torneos</a>
+                    <a href="#" class="text-green-200 font-medium">Ranking</a>
+                    <a href="league.html" class="hover:text-green-200">Liga</a>
+                    <a href="community.html" class="hover:text-green-200">Comunidad</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Rankings Hero Section -->
+    <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Ranking de Jugadores</h1>
+        <p class="text-xl md:text-2xl mb-8">Clasificación oficial de la comunidad de padel en Cali</p>
+    </section>
+
+    <!-- Rankings Filter Section -->
+    <section class="container mx-auto px-6 py-12">
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Filtrar Ranking</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <select class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <option>Categoría: Todas</option>
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                            <option>Mixto</option>
+                            <option>Sub-15</option>
+                            <option>Sub-18</option>
+                        </select>
+                        <select class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <option>Nivel: Todos</option>
+                            <option>Principiante</option>
+                            <option>Intermedio</option>
+                            <option>Avanzado</option>
+                            <option>Profesional</option>
+                        </select>
+                        <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                            Aplicar Filtros
+                        </button>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-gray-600">Actualizado: 10 Octubre 2023</p>
+                    <p class="text-sm text-gray-600">Próxima actualización: 24 Octubre 2023</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rankings Table -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 ranking-table">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Posición</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Jugador</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Puntos</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Partidos</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Victorias</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">% Victorias</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tendencia</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <!-- Player 1 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-semibold">1</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 h-10 w-10">
+                                        <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Juan Pérez">
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">Juan Pérez</div>
+                                        <div class="text-sm text-gray-500">
+                                            <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded">Avanzado</span>
+                                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded ml-1">Masculino</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">1,245</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">42</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">35</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">83.3%</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold flex items-center">
+                                    <i class="fas fa-arrow-up mr-1"></i> +2
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- Player 2 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold">2</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 h-10 w-10">
+                                        <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/44.jpg" alt="María Gómez">
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">María Gómez</div>
+                                        <div class="text-sm text-gray-500">
+                                            <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded">Avanzado</span>
+                                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-0.5 rounded ml-1">Femenino</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">1,198</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">38</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">31</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">81.6%</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold flex items-center">
+                                    <i class="fas fa-arrow-up mr-1"></i> +1
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- More players would go here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex items-center justify-between mt-6">
+            <div>
+                <p class="text-sm text-gray-700">
+                    Mostrando <span class="font-medium">1</span> a <span class="font-medium">10</span> de <span class="font-medium">124</span> jugadores
+                </p>
+            </div>
+            <div class="flex space-x-2">
+                <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                    Anterior
+                </button>
+                <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-white bg-green-600 hover:bg-green-700">
+                    1
+                </button>
+                <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                    2
+                </button>
+                <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                    Siguiente
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Players Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Jugadores Destacados</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Conoce a los mejores jugadores de nuestra comunidad</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Featured Player 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden player-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" alt="Juan Pérez" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 bg-green-600 text-white px-3 py-1 text-sm font-bold">
+                            #1 Ranking
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Juan Pérez</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Avanzado</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Masculino</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-center mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Puntos</p>
+                                <p class="font-bold text-green-600">1,245</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Partidos</p>
+                                <p class="font-bold">42</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">% Victorias</p>
+                                <p class="font-bold">83.3%</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition duration-300">
+                            Ver Perfil
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Featured Player 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden player-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" alt="María Gómez" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 bg-blue-600 text-white px-3 py-1 text-sm font-bold">
+                            #2 Ranking
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">María Gómez</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Avanzado</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Femenino</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-center mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Puntos</p>
+                                <p class="font-bold text-blue-600">1,198</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Partidos</p>
+                                <p class="font-bold">38</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">% Victorias</p>
+                                <p class="font-bold">81.6%</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition duration-300">
+                            Ver Perfil
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Featured Player 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden player-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Carlos Rojas" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 bg-purple-600 text-white px-3 py-1 text-sm font-bold">
+                            Mejor Progreso
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Carlos Rojas</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Intermedio</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Masculino</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-center mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Puntos</p>
+                                <p class="font-bold text-purple-600">987</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Partidos</p>
+                                <p class="font-bold">29</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">% Victorias</p>
+                                <p class="font-bold">75.9%</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition duration-300">
+                            Ver Perfil
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ranking System Info Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2 bg-green-700 text-white p-8 flex flex-col justify-center">
+                    <h2 class="text-2xl font-bold mb-4">Sistema de Ranking</h2>
+                    <p class="mb-6">Nuestro sistema de puntos está diseñado para fomentar la competencia justa y el desarrollo de habilidades.</p>
+                    <div class="flex items-center">
+                        <i class="fas fa-info-circle text-xl mr-3"></i>
+                        <p class="text-sm">Actualizado semanalmente</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <h3 class="text-xl font-bold mb-4 text-green-700">Cómo se calculan los puntos</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-trophy text-xs"></i>
+                            </div>
+                            <span class="text-gray-600">Victoria en torneo: 50-100 puntos según categoría</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-medal text-xs"></i>
+                            </div>
+                            <span class="text-gray-600">Segundo puesto: 30-60 puntos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-gamepad text-xs"></i>
+                            </div>
+                            <span class="text-gray-600">Partido ganado en liga: 20 puntos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-user-graduate text-xs"></i>
+                            </div>
+                            <span class="text-gray-600">Participación en academia: 5-10 puntos/mes</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Padel Cali</h3>
+                    <p class="text-gray-400">La comunidad de padel más grande del Valle del Cauca.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="academy.html" class="text-gray-400 hover:text-white">Academia</a></li>
+                        <li><a href="tournaments.html" class="text-gray-400 hover:text-white">Torneos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Cali, Colombia</p>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i> +57 123 456 7890</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@padelcali.com</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Padel Community Cali. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality would go here
+    </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liga de Padel - Padel Cali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .match-card {
+            transition: all 0.3s ease;
+        }
+        .match-card:hover {
+            background-color: #f0fdf4;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-green-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-table-tennis text-2xl"></i>
+                    <span class="font-semibold text-xl">Padel Cali</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-green-200">Inicio</a>
+                    <a href="academy.html" class="hover:text-green-200">Academia</a>
+                    <a href="tournaments.html" class="hover:text-green-200">Torneos</a>
+                    <a href="rankings.html" class="hover:text-green-200">Ranking</a>
+                    <a href="#" class="text-green-200 font-medium">Liga</a>
+                    <a href="community.html" class="hover:text-green-200">Comunidad</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- League Hero Section -->
+    <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Liga de Padel Cali</h1>
+        <p class="text-xl md:text-2xl mb-8">Competición por equipos de octubre a diciembre 2023</p>
+    </section>
+
+    <!-- League Overview Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-green-700 mb-4">Liga Municipal de Padel</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">12 equipos compitiendo en 3 categorías diferentes</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <!-- Division 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-green-700 text-white py-4 px-6">
+                    <h3 class="text-xl font-bold">División 1</h3>
+                    <p class="text-green-200">Nivel Avanzado</p>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-gray-600">Equipos:</p>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">4</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-gray-600">Partidos:</p>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">12 por equipo</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-600">Premio:</p>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">$5.000.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Division 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-blue-700 text-white py-4 px-6">
+                    <h3 class="text-xl font-bold">División 2</h3>
+                    <p class="text-blue-200">Nivel Intermedio</p>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-gray-600">Equipos:</p>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">4</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-gray-600">Partidos:</p>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">12 por equipo</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-600">Premio:</p>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">$3.000.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Division 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-yellow-600 text-white py-4 px-6">
+                    <h3 class="text-xl font-bold">División 3</h3>
+                    <p class="text-yellow-200">Nivel Principiante</p>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-gray-600">Equipos:</p>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">4</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <p class="text-gray-600">Partidos:</p>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">12 por equipo</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-600">Premio:</p>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">$1.500.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Standings Section -->
+        <div class="mb-16">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-green-700">Tabla de Posiciones - División 1</h3>
+                <select class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option>División 1</option>
+                    <option>División 2</option>
+                    <option>División 3</option>
+                </select>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pos</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Equipo</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PJ</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PG</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PP</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">SF</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">SC</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- Team 1 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">1</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10">
+                                            <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/40" alt="Los Padelones">
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">Los Padelones</div>
+                                            <div class="text-sm text-gray-500">Club Padel Cali</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">6</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">12</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">4</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600">15</td>
+                            </tr>
+                            <!-- More teams would go here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teams Section -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-bold text-green-700 mb-6">Equipos Participantes</h3>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Team Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden team-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoH3Z6tr7huTlCVFeBUE2tqZUTdUEd8m41SA&s" alt="Los Padelones" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                            División 1
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Los Padelones</h4>
+                        <p class="text-gray-600 mb-4">Club Padel Cali</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="font-semibold mb-2">Jugadores:</h5>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Juan Pérez" class="w-8 h-8 rounded-full mr-2">
+                                    <span>Juan Pérez (C)</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Carlos Rojas" class="w-8 h-8 rounded-full mr-2">
+                                    <span>Carlos Rojas</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="María Gómez" class="w-8 h-8 rounded-full mr-2">
+                                    <span>María Gómez</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana P." class="w-8 h-8 rounded-full mr-2">
+                                    <span>Ana P.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-gray-500">Posición actual:</p>
+                                <p class="font-bold text-green-600">1° (15 pts)</p>
+                            </div>
+                            <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- More team cards would go here -->
+            </div>
+        </div>
+
+        <!-- Schedule Section -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-bold text-green-700 mb-6">Calendario de Partidos</h3>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h4 class="text-lg font-semibold">Semana 5 - División 1</h4>
+                            <p class="text-gray-600">14-15 Octubre 2023</p>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                Semana Anterior
+                            </button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-white bg-green-600 hover:bg-green-700">
+                                Semana 5
+                            </button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                Semana Siguiente
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Match 1 -->
+                        <div class="match-card border border-gray-200 rounded-lg p-4 hover:border-green-300">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="text-sm text-gray-500">
+                                    <i class="fas fa-calendar-day mr-1"></i> 14 Oct, 10:00
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    <i class="fas fa-map-marker-alt mr-1"></i> Cancha 1 - Club Padel Cali
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img src="https://via.placeholder.com/30" alt="Los Padelones" class="w-8 h-8 rounded-full mr-3">
+                                    <span class="font-medium">Los Padelones</span>
+                                </div>
+                                <div class="px-4 py-1 bg-gray-100 rounded-full text-sm font-semibold">
+                                    VS
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-medium">Smash Team</span>
+                                    <img src="https://via.placeholder.com/30" alt="Smash Team" class="w-8 h-8 rounded-full ml-3">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More matches would go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Section -->
+        <div class="bg-green-50 rounded-xl p-8 mb-16">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-green-700 mb-2">¿Quieres participar en la próxima temporada?</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">Regístrate ahora para recibir información sobre la próxima temporada de la liga</p>
+            </div>
+
+            <div class="max-w-md mx-auto">
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="team-name">Nombre del Equipo</label>
+                        <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="team-name" type="text" placeholder="Ej: Los Padelones">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="captain">Capitán</label>
+                        <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="captain" type="text" placeholder="Tu nombre completo">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="team-email">Correo Electrónico</label>
+                        <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="team-email" type="email" placeholder="tu@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="division">División de Interés</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="division">
+                            <option value="">Selecciona una división</option>
+                            <option value="1">División 1 (Avanzado)</option>
+                            <option value="2">División 2 (Intermedio)</option>
+                            <option value="3">División 3 (Principiante)</option>
+                        </select>
+                    </div>
+                    <button class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300" type="submit">
+                        Enviar Solicitud
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Padel Cali</h3>
+                    <p class="text-gray-400">La comunidad de padel más grande del Valle del Cauca.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="academy.html" class="text-gray-400 hover:text-white">Academia</a></li>
+                        <li><a href="tournaments.html" class="text-gray-400 hover:text-white">Torneos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Cali, Colombia</p>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i> +57 123 456 7890</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@padelcali.com</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Padel Community Cali. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality would go here
+    </script>
+</body>
+</html>

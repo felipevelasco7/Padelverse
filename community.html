@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad de Padel - Padel Cali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .forum-post:hover {
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-green-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-table-tennis text-2xl"></i>
+                    <span class="font-semibold text-xl">Padel Cali</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-green-200">Inicio</a>
+                    <a href="academy.html" class="hover:text-green-200">Academia</a>
+                    <a href="tournaments.html" class="hover:text-green-200">Torneos</a>
+                    <a href="rankings.html" class="hover:text-green-200">Ranking</a>
+                    <a href="league.html" class="hover:text-green-200">Liga</a>
+                    <a href="#" class="text-green-200 font-medium">Comunidad</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Community Hero Section -->
+    <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Comunidad de Padel</h1>
+        <p class="text-xl md:text-2xl mb-8">Conecta con otros apasionados del padel en Cali</p>
+    </section>
+
+    <!-- Events Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-green-700 mb-4">Próximos Eventos</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Actividades sociales y encuentros para la comunidad</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Event 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden event-card transition duration-300">
+                <div class="relative">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoH3Z6tr7huTlCVFeBUE2tqZUTdUEd8m41SA&s" alt="Noche de Padel" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 font-bold px-3 py-1 rounded-full text-xs">
+                        PRÓXIMO
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-gray-500 mb-3">
+                        <i class="fas fa-calendar-day mr-2"></i>
+                        <span>20 Octubre 2023, 19:00</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Noche de Padel Social</h3>
+                    <p class="text-gray-600 mb-4">Encuentro social con partidos amistosos y música en vivo.</p>
+                    <div class="flex items-center text-gray-500 mb-4">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>Club Padel Cali</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Gratis</span>
+                        <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                            Confirmar Asistencia
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden event-card transition duration-300">
+                <div class="relative">
+                    <img src="https://www.lta.org.uk/49058d/siteassets/play/padel/image/woman-playing-padel.jpg" alt="Clínica de Padel" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-400 text-blue-900 font-bold px-3 py-1 rounded-full text-xs">
+                        INSCRIPCIÓN
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-gray-500 mb-3">
+                        <i class="fas fa-calendar-day mr-2"></i>
+                        <span>28 Octubre 2023, 09:00</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Clínica de Padel para Principiantes</h3>
+                    <p class="text-gray-600 mb-4">Aprende los fundamentos del padel con nuestros entrenadores.</p>
+                    <div class="flex items-center text-gray-500 mb-4">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>Canchas VIP Padel</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">$50.000</span>
+                        <button class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                            Inscribirse
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden event-card transition duration-300">
+                <div class="relative">
+                    <img src="https://static.independent.co.uk/2024/07/05/11/what-is-Padel-indybest.png" alt="Torneo Familiar" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-purple-400 text-purple-900 font-bold px-3 py-1 rounded-full text-xs">
+                        FAMILIAS
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-gray-500 mb-3">
+                        <i class="fas fa-calendar-day mr-2"></i>
+                        <span>5 Noviembre 2023, 10:00</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Torneo Familiar</h3>
+                    <p class="text-gray-600 mb-4">Competencia para toda la familia en categorías mixtas.</p>
+                    <div class="flex items-center text-gray-500 mb-4">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>Complejo La Flora</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">$80.000/pareja</span>
+                        <button class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                            Más Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forum Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Foro de la Comunidad</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Comparte consejos, organiza partidos y conecta con otros jugadores</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Temas Recientes</h3>
+                        <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                            Nuevo Tema
+                        </button>
+                    </div>
+                </div>
+                <div class="divide-y divide-gray-200">
+                    <!-- Forum Post 1 -->
+                    <div class="forum-post p-6 transition duration-300">
+                        <div class="flex items-start">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Juan Pérez" class="w-12 h-12 rounded-full mr-4">
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h4 class="font-bold">¿Buscando pareja para torneo intermedio?</h4>
+                                    <span class="text-sm text-gray-500">Hoy, 10:45 AM</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">Hola comunidad, estoy buscando pareja para el torneo de fin de mes. Juego nivel intermedio y prefiero categoría masculina. ¿Alguien interesado?</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <span class="mr-4"><i class="far fa-comment mr-1"></i> 5 respuestas</span>
+                                    <span><i class="far fa-eye mr-1"></i> 42 vistas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More forum posts would go here -->
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-white hover:bg-gray-50 text-gray-800 font-bold py-2 px-4 border border-gray-300 rounded-lg shadow-sm transition duration-300">
+                    Ver Todos los Temas
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-green-700 mb-4">Nuestros Aliados</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Empresas que apoyan a la comunidad de padel en Cali</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                <img src="https://via.placeholder.com/150x60?text=PadelPro" alt="PadelPro" class="h-12 object-contain">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                <img src="https://via.placeholder.com/150x60?text=Smash" alt="Smash" class="h-12 object-contain">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                <img src="https://via.placeholder.com/150x60?text=SportLife" alt="SportLife" class="h-12 object-contain">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                <img src="https://via.placeholder.com/150x60?text=CaliActive" alt="CaliActive" class="h-12 object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-green-700 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Únete a Nuestra Comunidad</h2>
+                <p class="text-xl mb-8">Recibe noticias, eventos y promociones directamente en tu correo</p>
+                
+                <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="Tu correo electrónico" class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300 text-gray-900">
+                    <button type="submit" class="bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold px-6 py-3 rounded-lg transition duration-300">
+                        Suscribirse
+                    </button>
+                </form>
+                
+                <p class="text-green-200 text-sm mt-4">Nosotros respetamos tu privacidad. Nunca compartiremos tu información.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-green-700 mb-4">Lo que dicen nuestros miembros</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Testimonios de la comunidad de padel en Cali</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Laura M." class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-bold">Laura M.</h4>
+                        <p class="text-green-600 text-sm">Miembro desde 2021</p>
+                    </div>
+                </div>
+                <p class="text-gray-600">"Gracias a la comunidad he conocido a mis mejores amigos de padel. Siempre hay alguien con quien jugar y los eventos son increíbles!"</p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Carlos V." class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-bold">Carlos V.</h4>
+                        <p class="text-green-600 text-sm">Miembro desde 2022</p>
+                    </div>
+                </div>
+                <p class="text-gray-600">"El foro es muy útil para encontrar consejos y mejorar mi juego. También he encontrado excelentes parejas para los torneos."</p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana P." class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-bold">Ana P.</h4>
+                        <p class="text-green-600 text-sm">Miembro desde 2023</p>
+                    </div>
+                </div>
+                <p class="text-gray-600">"Me encanta el ambiente familiar de la comunidad. Las noches de padel social son mi evento favorito del mes."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Padel Cali</h3>
+                    <p class="text-gray-400">La comunidad de padel más grande del Valle del Cauca.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="academy.html" class="text-gray-400 hover:text-white">Academia</a></li>
+                        <li><a href="tournaments.html" class="text-gray-400 hover:text-white">Torneos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Cali, Colombia</p>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i> +57 123 456 7890</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@padelcali.com</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Padel Community Cali. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality would go here
+    </script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos de Padel - Padel Cali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .tournament-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .countdown {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-green-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-table-tennis text-2xl"></i>
+                    <span class="font-semibold text-xl">Padel Cali</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-green-200">Inicio</a>
+                    <a href="academy.html" class="hover:text-green-200">Academia</a>
+                    <a href="#" class="text-green-200 font-medium">Torneos</a>
+                    <a href="rankings.html" class="hover:text-green-200">Ranking</a>
+                    <a href="league.html" class="hover:text-green-200">Liga</a>
+                    <a href="community.html" class="hover:text-green-200">Comunidad</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tournaments Hero Section -->
+    <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Torneos de Padel</h1>
+        <p class="text-xl md:text-2xl mb-8">Competiciones para todos los niveles en Cali</p>
+    </section>
+
+    <!-- Upcoming Tournaments Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-green-700 mb-4">Próximos Torneos</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Participa en nuestros eventos y demuestra tu talento en la cancha.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tournament 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden tournament-card transition duration-300">
+                <div class="relative">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSozy6QVwGAqW6B2v9mqOJZVx6q0VRjj0KZUw&s" alt="Torneo Aniversario" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 font-bold px-3 py-1 rounded-full text-xs">
+                        INSCRIPCIONES ABIERTAS
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Torneo Aniversario</h3>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Principiante</span>
+                    </div>
+                    <div class="flex items-center text-gray-500 mb-3">
+                        <i class="fas fa-calendar-day mr-2"></i>
+                        <span>15-17 Octubre 2023</span>
+                    </div>
+                    <div class="flex items-center text-gray-500 mb-4">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>Club Padel Cali</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Celebra con nosotros nuestro 5to aniversario con este torneo especial para principiantes.</p>
+                    
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">Categorías:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Masculino</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Femenino</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Mixto</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">Premios:</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-600">
+                            <li>1er puesto: $2.000.000 + trofeo</li>
+                            <li>2do puesto: $1.000.000 + medallas</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-gray-500">Inscripción:</p>
+                            <p class="font-bold text-green-600">$120.000 por pareja</p>
+                        </div>
+                        <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                            Inscribirse
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tournament 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden tournament-card transition duration-300">
+                <div class="relative">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR24xnlTytBDAVgZykvuzwil7VuYu4ReYQq-A&s" alt="Copa Elite" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-red-400 text-red-900 font-bold px-3 py-1 rounded-full text-xs">
+                        PRÓXIMAMENTE
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Copa Elite</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Avanzado</span>
+                    </div>
+                    <div class="flex items-center text-gray-500 mb-3">
+                        <i class="fas fa-calendar-day mr-2"></i>
+                        <span>12-14 Noviembre 2023</span>
+                    </div>
+                    <div class="flex items-center text-gray-500 mb-4">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>Canchas Padel VIP</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Torneo exclusivo para jugadores avanzados con ranking nacional.</p>
+                    
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">Categorías:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Masculino</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Femenino</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">Premios:</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-600">
+                            <li>1er puesto: $5.000.000 + trofeo</li>
+                            <li>2do puesto: $3.000.000 + medallas</li>
+                            <li>3er puesto: $1.000.000</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-gray-500">Inscripción:</p>
+                            <p class="font-bold text-blue-600">$200.000 por pareja</p>
+                        </div>
+                        <button class="bg-gray-300 text-gray-600 font-bold py-2 px-4 rounded-lg text-sm cursor-not-allowed" disabled>
+                            Próximamente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tournament 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden tournament-card transition duration-300">
+                <div class="relative">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3_RhG3d9XL6OTfE4VGhV_RYSfVzx0z3v2Q&s" alt="Torneo Juvenil" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-400 text-green-900 font-bold px-3 py-1 rounded-full text-xs">
+                        INSCRIPCIONES ABIERTAS
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Torneo Juvenil</h3>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Sub-18</span>
+                    </div>
+                    <div class="flex items-center text-gray-500 mb-3">
+                        <i class="fas fa-calendar-day mr-2"></i>
+                        <span>5-6 Noviembre 2023</span>
+                    </div>
+                    <div class="flex items-center text-gray-500 mb-4">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>Complejo Deportivo La Flora</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Competencia para jóvenes promesas del padel en el Valle del Cauca.</p>
+                    
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">Categorías:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Masculino</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Femenino</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Sub-15</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Sub-18</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">Premios:</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-600">
+                            <li>Becas de entrenamiento</li>
+                            <li>Equipamiento deportivo</li>
+                            <li>Trofeos y medallas</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-gray-500">Inscripción:</p>
+                            <p class="font-bold text-green-600">$80.000 por pareja</p>
+                        </div>
+                        <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                            Inscribirse
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-green-700 text-white p-8 flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-4">Registro para Torneos</h2>
+                        <p class="mb-6">Completa el formulario para inscribirte en nuestros torneos. Recibirás confirmación por correo electrónico.</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-info-circle text-xl mr-3"></i>
+                            <p class="text-sm">Todos los campos son obligatorios</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nombre Completo</label>
+                                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="name" type="text" placeholder="Tu nombre">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Correo Electrónico</label>
+                                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="email" type="email" placeholder="tu@email.com">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Teléfono</label>
+                                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="phone" type="tel" placeholder="+57 300 123 4567">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="tournament">Torneo</label>
+                                <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="tournament">
+                                    <option value="">Selecciona un torneo</option>
+                                    <option value="aniversario">Torneo Aniversario (15-17 Oct)</option>
+                                    <option value="juvenil">Torneo Juvenil (5-6 Nov)</option>
+                                    <option value="elite">Copa Elite (12-14 Nov)</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="category">Categoría</label>
+                                <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="category">
+                                    <option value="">Selecciona una categoría</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                    <option value="mixto">Mixto</option>
+                                    <option value="sub15">Sub-15</option>
+                                    <option value="sub18">Sub-18</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="partner">Nombre de Pareja</label>
+                                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="partner" type="text" placeholder="Nombre de tu pareja">
+                            </div>
+                            <button class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300" type="submit">
+                                Enviar Registro
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Tournaments Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-green-700 mb-4">Torneos Anteriores</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Revisa los resultados de nuestros torneos pasados.</p>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                <thead class="bg-green-700 text-white">
+                    <tr>
+                        <th class="py-3 px-4 text-left">Torneo</th>
+                        <th class="py-3 px-4 text-left">Fecha</th>
+                        <th class="py-3 px-4 text-left">Categoría</th>
+                        <th class="py-3 px-4 text-left">Ganadores</th>
+                        <th class="py-3 px-4 text-left">Resultados</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-50">
+                        <td class="py-4 px-4">Copa Verano</td>
+                        <td class="py-4 px-4">20-22 Agosto 2023</td>
+                        <td class="py-4 px-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Intermedio</span>
+                        </td>
+                        <td class="py-4 px-4">Juan Pérez & Carlos Rojas</td>
+                        <td class="py-4 px-4">
+                            <a href="#" class="text-green-600 hover:underline">Ver detalles</a>
+                        </td>
+                    </tr>
+                    <!-- More past tournament rows would go here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Galería de Torneos</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Momentos destacados de nuestras competencias.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#" class="group">
+                    <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85" alt="Torneo" class="w-full h-48 object-cover rounded-lg group-hover:opacity-75 transition duration-300">
+                </a>
+                <!-- More gallery images would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Padel Cali</h3>
+                    <p class="text-gray-400">La comunidad de padel más grande del Valle del Cauca.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="academy.html" class="text-gray-400 hover:text-white">Academia</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Torneos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Cali, Colombia</p>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i> +57 123 456 7890</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@padelcali.com</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Padel Community Cali. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality would go here
+    </script>
+</body>
+</html>
