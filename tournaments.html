@@ -21,30 +21,32 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation (same as index.html) -->
-    <nav class="bg-green-700 text-white shadow-lg">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <i class="fas fa-table-tennis text-2xl"></i>
-                    <span class="font-semibold text-xl">Padel Cali</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="hover:text-green-200">Inicio</a>
-                    <a href="academy.html" class="hover:text-green-200">Academia</a>
-                    <a href="#" class="text-green-200 font-medium">Torneos</a>
-                    <a href="rankings.html" class="hover:text-green-200">Ranking</a>
-                    <a href="league.html" class="hover:text-green-200">Liga</a>
-                    <a href="community.html" class="hover:text-green-200">Comunidad</a>
-                </div>
-                <div class="md:hidden">
-                    <button class="mobile-menu-button">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+<!-- Navigation -->
+<nav class="bg-green-700 text-white shadow-lg">
+    <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-table-tennis text-2xl"></i>
+                <span class="font-semibold text-xl">PadelVerse</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="hover:text-green-200">Inicio</a>
+                <a href="academy.html" class="hover:text-green-200">Academia</a>
+                <a href="tournaments.html" class="hover:text-green-200">Torneos</a>
+                <a href="rankings.html" class="hover:text-green-200">Ranking</a>
+                <a href="league.html" class="hover:text-green-200">Liga</a>
+                <a href="community.html" class="text-green-200 font-medium">Comunidad</a>
+                <a href="jugar.html" class="text-green-200 font-medium">Juega YA!</a>
+
+            </div>
+            <div class="md:hidden">
+                <button class="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Tournaments Hero Section -->
     <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20 px-4 text-center">
@@ -105,15 +107,16 @@
                             <p class="text-xs text-gray-500">Inscripción:</p>
                             <p class="font-bold text-green-600">$120.000 por pareja</p>
                         </div>
-                        <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
-                            Inscribirse
-                        </button>
+                        <a href="#inscripcion" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                        Inscribirse
+                        </a>
+
                     </div>
                 </div>
             </div>
 
             <!-- Tournament 2 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden tournament-card transition duration-300">
+            <div   class="bg-white rounded-xl shadow-md overflow-hidden tournament-card transition duration-300">
                 <div class="relative">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR24xnlTytBDAVgZykvuzwil7VuYu4ReYQq-A&s" alt="Copa Elite" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-red-400 text-red-900 font-bold px-3 py-1 rounded-full text-xs">
@@ -135,7 +138,7 @@
                     </div>
                     <p class="text-gray-600 mb-4">Torneo exclusivo para jugadores avanzados con ranking nacional.</p>
                     
-                    <div class="mb-4">
+                    <div  class="mb-4">
                         <h4 class="font-semibold mb-2">Categorías:</h4>
                         <div class="flex flex-wrap gap-2">
                             <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Masculino</span>
@@ -211,9 +214,9 @@
                             <p class="text-xs text-gray-500">Inscripción:</p>
                             <p class="font-bold text-green-600">$80.000 por pareja</p>
                         </div>
-                        <button class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
-                            Inscribirse
-                        </button>
+                        <a href="#inscripcion" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                        Inscribirse
+                        </a>
                     </div>
                 </div>
             </div>
@@ -233,7 +236,7 @@
                             <p class="text-sm">Todos los campos son obligatorios</p>
                         </div>
                     </div>
-                    <div class="md:w-1/2 p-8">
+                    <div id="inscripcion" class="md:w-1/2 p-8">
                         <form>
                             <div class="mb-4">
                                 <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nombre Completo</label>
@@ -247,7 +250,7 @@
                                 <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Teléfono</label>
                                 <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="phone" type="tel" placeholder="+57 300 123 4567">
                             </div>
-                            <div class="mb-4">
+                            <div  class="mb-4">
                                 <label class="block text-gray-700 text-sm font-bold mb-2" for="tournament">Torneo</label>
                                 <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="tournament">
                                     <option value="">Selecciona un torneo</option>
@@ -271,7 +274,7 @@
                                 <label class="block text-gray-700 text-sm font-bold mb-2" for="partner">Nombre de Pareja</label>
                                 <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" id="partner" type="text" placeholder="Nombre de tu pareja">
                             </div>
-                            <button class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300" type="submit">
+                            <button  class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300" type="submit">
                                 Enviar Registro
                             </button>
                         </form>
