@@ -1,192 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jugar Ya! | Padel Cali</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jugar Ya! | Padel Cali</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 </head>
 <body class="bg-gray-100 text-gray-800">
-
-    <!-- Navbar -->
-    <nav class="bg-green-700 text-white shadow-lg">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <i class="fas fa-table-tennis text-2xl"></i>
-                    <span class="font-semibold text-xl">Padel Cali</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="hover:text-green-200">Inicio</a>
-                    <a href="rankings.html" class="hover:text-green-200">Ranking</a>
-                    <a href="legue.html" class="hover:text-green-200">Liga</a>
-                    <a href="community.html" class="hover:text-green-200">Comunidad</a>
-                    <a href="jugar.html" class="hover:text-green-200 font-bold border-b-2 border-white">Jugar Ya!</a>
-                </div>
-            </div>
+  <!-- Navbar -->
+  <nav class="bg-green-700 text-white shadow-lg">
+    <div class="container mx-auto px-6 py-3">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-table-tennis text-2xl"></i>
+          <span class="font-semibold text-xl">Padel Cali</span>
         </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="bg-green-100 py-16 text-center">
-        <h1 class="text-4xl font-extrabold text-green-800 mb-4">¡Encuentra tu Partido Hoy!</h1>
-        <p class="text-lg text-gray-700 mb-6">Conecta con otros jugadores o reserva tu cancha en los mejores clubes de Cali.</p>
-        <a href="https://chat.whatsapp.com/J7TIUXBPssu5TH2JG28eJN?mode=wwc" target="_blank" 
-           class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold inline-flex items-center space-x-2">
-            <i class="fab fa-whatsapp text-2xl"></i>
-            <span>Únete al grupo de WhatsApp y encuentra tu partido aqui</span>
-        </a>
-    </section>
-
-    <!-- Reserva de Canchas -->
-     <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/4613-ccbcali/30min" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly inline widget end -->
-
-    <section class="container mx-auto px-6 py-12">
-        <h2 class="text-3xl font-bold text-center mb-8 text-green-700">Reserva tu cancha</h2>
-
-        <div class="max-w-lg mx-auto bg-white p-6 rounded-2xl shadow-md">
-            <form id="booking-form" class="space-y-4">
-                <!-- Datos personales -->
-                <div>
-                    <label for="nombre" class="block font-medium mb-2">Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre" required
-                           class="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500">
-                </div>
-                <div>
-                    <label for="correo" class="block font-medium mb-2">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo" required
-                           class="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500">
-                </div>
-                <div>
-                    <label for="telefono" class="block font-medium mb-2">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" required
-                           class="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500">
-                </div>
-
-                <!-- Selección de reserva -->
-                <div>
-                    <label for="club" class="block font-medium mb-2">Selecciona un club</label>
-                    <select id="club" name="club" required
-                            class="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500">
-                        <option value="">-- Selecciona --</option>
-                        <option value="padelcenter">Padel Center Cali</option>
-                        <option value="clubpalmira">Club Padel Palmira</option>
-                        <option value="zonapadel">Zona Padel Valle</option>
-                        <option value="urbano">Urban Padel Club</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="fecha" class="block font-medium mb-2">Fecha</label>
-                    <input type="date" id="fecha" name="fecha" required
-                           class="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500">
-                </div>
-
-                <div>
-                    <label for="hora" class="block font-medium mb-2">Hora</label>
-                    <select id="hora" name="hora" required
-                            class="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500">
-                        <option value="">-- Selecciona --</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="jugadores" class="block font-medium mb-2">Número de jugadores</label>
-                    <select id="jugadores" name="jugadores" required
-                            class="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500">
-                        <option value="">-- Selecciona --</option>
-                        <option>2 jugadores</option>
-                        <option>4 jugadores</option>
-                        <option>6 jugadores</option>
-                    </select>
-                </div>
-
-                <button type="submit" 
-                        class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg">
-                    Reservar cancha
-                </button>
-            </form>
-
-            <div id="confirmacion" 
-                 class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg text-center font-medium">
-                ✅ Tu cancha ha sido reservada con éxito.
-            </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="hover:text-green-200">Inicio</a>
+          <a href="rankings.html" class="hover:text-green-200">Ranking</a>
+          <a href="legue.html" class="hover:text-green-200">Liga</a>
+          <a href="community.html" class="hover:text-green-200">Comunidad</a>
+          <a
+            href="jugar.html"
+            class="hover:text-green-200 font-bold border-b-2 border-white"
+            >Jugar Ya!</a
+          >
         </div>
-    </section>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="bg-green-700 text-white py-6 text-center">
-        <p>&copy; 2025 Padel Cali | Desarrollado por Felipe Velasco</p>
-    </footer>
+  <!-- Hero -->
+  <section class="bg-green-100 py-16 text-center">
+    <h1 class="text-4xl font-extrabold text-green-800 mb-4">
+      ¡Encuentra tu Partido Hoy!
+    </h1>
+    <p class="text-lg text-gray-700 mb-6">
+      Conecta con otros jugadores o reserva tu cancha en los mejores clubes de Cali.
+    </p>
+    <a
+      href="https://chat.whatsapp.com/J7TIUXBPssu5TH2JG28eJN?mode=wwc"
+      target="_blank"
+      class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold inline-flex items-center space-x-2"
+    >
+      <i class="fab fa-whatsapp text-2xl"></i>
+      <span>Únete al grupo de WhatsApp y encuentra tu partido aquí</span>
+    </a>
+  </section>
 
-    <script>
-        // Horarios disponibles por defecto
-        const horasDisponibles = [
-            "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM",
-            "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM"
-        ];
+  <!-- Selección de Club -->
+  <section class="container mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-center mb-8 text-green-700">
+      Reserva tu cancha
+    </h2>
 
-        // Simulación de reservas existentes (podría venir de una API o base de datos)
-        const reservas = {
-            "padelcenter": {
-                "2025-10-16": ["08:00 AM", "06:00 PM"],
-                "2025-10-17": ["07:00 AM", "05:00 PM"]
-            },
-            "clubpalmira": {
-                "2025-10-16": ["09:00 AM"]
-            }
-        };
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-2xl shadow-md text-center">
+      <label for="club" class="block font-medium mb-2">Selecciona un club:</label>
+      <select
+        id="club"
+        name="club"
+        required
+        class="w-full border-gray-300 rounded-lg p-2 mb-6 focus:ring-green-500 focus:border-green-500"
+      >
+        <option value="">-- Selecciona --</option>
+        <option value="padelcenter">Panoramic Padel</option>
+        <option value="clubpalmira">Padel YA</option>
+        <option value="zonapadel">Padeling</option>
+        <option value="urbano">Urban Padel Club</option>
+      </select>
 
-        const clubSelect = document.getElementById("club");
-        const fechaInput = document.getElementById("fecha");
-        const horaSelect = document.getElementById("hora");
+      <!-- Contenedor donde se mostrará el calendario -->
+      <div id="calendly-container" class="hidden">
+        <div
+          id="calendly-widget"
+          class="calendly-inline-widget"
+          style="min-width: 320px; height: 700px"
+        ></div>
+      </div>
+    </div>
+  </section>
 
-        function actualizarHoras() {
-            horaSelect.innerHTML = '<option value="">-- Selecciona --</option>';
-            const club = clubSelect.value;
-            const fecha = fechaInput.value;
-            if (!club || !fecha) return;
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-6 text-center">
+    <p>&copy; 2025 Padel Cali | Desarrollado por Felipe Velasco</p>
+  </footer>
 
-            const ocupadas = reservas[club]?.[fecha] || [];
-            horasDisponibles.forEach(hora => {
-                const option = document.createElement("option");
-                option.value = hora;
-                option.textContent = hora;
-                if (ocupadas.includes(hora)) {
-                    option.disabled = true;
-                    option.textContent += " (Reservada)";
-                    option.classList.add("text-gray-400");
-                }
-                horaSelect.appendChild(option);
+  <!-- Calendly Script -->
+  <script
+    type="text/javascript"
+    src="https://assets.calendly.com/assets/external/widget.js"
+  ></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const clubSelect = document.getElementById("club");
+      const calendlyContainer = document.getElementById("calendly-container");
+      const calendlyWidget = document.getElementById("calendly-widget");
+
+      const calendlyLinks = {
+        padelcenter: "https://calendly.com/4613-ccbcali/una-hora-de-cancha-clone",
+        clubpalmira: "https://calendly.com/4613-ccbcali/panoramic-clone",
+        zonapadel: "https://calendly.com/4613-ccbcali/30min",
+        urbano: "https://calendly.com/4613-ccbcali/padeling-clone",
+      };
+
+      clubSelect.addEventListener("change", (e) => {
+        const club = e.target.value;
+        if (club && calendlyLinks[club]) {
+          calendlyContainer.classList.remove("hidden");
+          calendlyWidget.innerHTML = ""; // Limpia el widget anterior
+
+          // Crear un nuevo div para el widget
+          const newWidget = document.createElement("div");
+          newWidget.className = "calendly-inline-widget";
+          newWidget.setAttribute("data-url", calendlyLinks[club]);
+          newWidget.style.minWidth = "320px";
+          newWidget.style.height = "700px";
+
+          calendlyWidget.appendChild(newWidget);
+
+          // Inicializar el nuevo widget
+          if (typeof Calendly !== "undefined") {
+            Calendly.initInlineWidget({
+              url: calendlyLinks[club],
+              parentElement: newWidget,
+              prefill: {},
+              utm: {},
             });
+          }
+        } else {
+          calendlyContainer.classList.add("hidden");
+          calendlyWidget.innerHTML = "";
         }
-
-        clubSelect.addEventListener("change", actualizarHoras);
-        fechaInput.addEventListener("change", actualizarHoras);
-
-        // Simulación de reserva
-        document.getElementById("booking-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const confirmacion = document.getElementById("confirmacion");
-            confirmacion.classList.remove("hidden");
-
-            // Simula bloqueo de hora reservada
-            const club = clubSelect.value;
-            const fecha = fechaInput.value;
-            const hora = horaSelect.value;
-            if (!reservas[club]) reservas[club] = {};
-            if (!reservas[club][fecha]) reservas[club][fecha] = [];
-            reservas[club][fecha].push(hora);
-
-            actualizarHoras();
-            this.reset();
-            setTimeout(() => confirmacion.classList.add("hidden"), 4000);
-        });
-    </script>
+      });
+    });
+  </script>
 
 </body>
 </html>
